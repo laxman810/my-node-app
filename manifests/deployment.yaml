@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: my-node-app
-        image: laxman810/my-node-app:latest  # Update to your image
+        image: laxman810/my-node-app:latest  # Update this to your Docker image name
         ports:
         - containerPort: 3000

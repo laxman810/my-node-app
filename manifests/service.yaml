@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: my-node-app
 spec:
-  type: NodePort
+  type: NodePort  # You can change this to LoadBalancer if using a cloud provider
+  selector:
+    app: my-node-app
   ports:
     - port: 3000
       targetPort: 3000
-      nodePort: 30001  # Optional
-  selector:
-    app: my-node-app
+      nodePort: 30001  # Optional, specify a port if you want
